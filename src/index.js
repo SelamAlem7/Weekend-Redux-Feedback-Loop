@@ -22,7 +22,9 @@ const usersFeedback = [{
 
 const feedbackReducer = (state = usersFeedback, action) => {
     if (action.type === 'SET_FEEDBACK') {
-      console.log(action);
+      console.log(action, 'action');
+      console.log(action.payload, 'action.payload');
+      
       return action.payload;
     }
     return state;
