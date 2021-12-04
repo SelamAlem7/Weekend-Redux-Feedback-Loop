@@ -19,8 +19,7 @@ router.get('/', (req, res) => {
 
 
 
-  // Adds a new book to the list of awesome reads
-// Request body must be a book object with a title and author.
+ 
 router.post('/',  (req, res) => {
     let newFeedback = req.body; // this will have the value of our new feedback inserted by the user
     console.log('this is the new feedback', newFeedback);
