@@ -29,6 +29,7 @@ function Feedback () {
   return(
         <div>
             <h2>Thank you!!</h2>
+            <h5> Your feedback has been submitted.</h5>
 
             <button onClick={handleButton}> LEAVE NEW FEEDBACK </button>
           

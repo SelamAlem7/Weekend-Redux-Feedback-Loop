@@ -16,7 +16,7 @@ const usersFeedback = [{ //
     understanding: '',
     support: '',
     comments: '',
-    support: '',
+  
 
 }]
 

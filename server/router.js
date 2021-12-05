@@ -4,18 +4,18 @@ const pool = require('./modules/pool.js');
 
 
 // Get all info from database
-router.get('/', (req, res) => {
-    let queryText = 'SELECT title, author FROM "feedback" ORDER BY "date" ';
-    pool.query(queryText).then(result => {
-      // Sends back the results in an object
-      console.log(results ,'this is the results')
-      res.send(result.rows); // request for rows
-    })
-    .catch(error => {
-      console.log('error getting info', error);
-      res.sendStatus(500);
-    });
-  });
+// router.get('/', (req, res) => {
+//     let queryText = 'SELECT title, author FROM "feedback" ORDER BY "date" ';
+//     pool.query(queryText).then(result => {
+//       // Sends back the results in an object
+//       console.log(results ,'this is the results')
+//       res.send(result.rows); // request for rows
+//     })
+//     .catch(error => {
+//       console.log('error getting info', error);
+//       res.sendStatus(500);
+//     });
+//   });
 
 
 
