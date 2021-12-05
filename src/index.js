@@ -11,8 +11,8 @@ import logger from 'redux-logger';
 
 
 
-const usersFeedback = [{ 
-    feeling: '',
+const usersFeedback = [{ //
+    feeling: '', 
     understanding: '',
     support: '',
     comments: '',
@@ -25,7 +25,7 @@ const feedbackReducer = (state = usersFeedback, action) => {
       console.log(action, 'action');
       console.log(action.payload, 'action.payload');
       
-      return action.payload;
+      return {...state, [action.payload.property]: action.payload.value}
     }
     return state;
   }

@@ -1,13 +1,15 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-
+import {useHistory} from 'react-router-dom';
+//-----------------------------------------------------
 
 function Feeling() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const [feeling, setFeeling] = useState(useSelector((store) => store.feedbackReducer.feeling));
-//onsole.log(feeling, 'feelingggg')
+//console.log(feeling, 'feelingggg')
 
 
     const handleNext = (event) => {
@@ -21,6 +23,7 @@ function Feeling() {
         value: feeling
     }
   })
+    history.push('/understanding')//directs to next page 
   
 };
  
@@ -40,7 +43,7 @@ function Feeling() {
         onChange={(event)=>setFeeling(event.target.value)}>
         </input>
 
-        <button> NEXT</button>
+        <button > NEXT</button>
           
     </form>
 
