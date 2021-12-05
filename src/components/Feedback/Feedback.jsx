@@ -6,19 +6,22 @@ import {useHistory} from 'react-router-dom';
 
 function Feedback () {
 
-    
     const dispatch = useDispatch();
     const history = useHistory();
 
 
 
 
-    const handleNext = (event) => {
+    const handleButton = (event) => {
         event.preventDefault();
-   console.log('comments is', comments)
-        
 
-  history.push('/feeling')
+        dispatch({
+            type: 'CLEAR'
+          })
+   
+        history.push('/feeling')
+
+
   
 };
  
@@ -27,7 +30,7 @@ function Feedback () {
         <div>
             <h2>Thank you!!</h2>
 
-            <button> LEAVE NEW FEEDBACK </button>
+            <button onClick={handleButton}> LEAVE NEW FEEDBACK </button>
           
               
 

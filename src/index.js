@@ -26,6 +26,8 @@ const feedbackReducer = (state = usersFeedback, action) => {
       console.log(action.payload, 'action.payload');
       
       return {...state, [action.payload.property]: action.payload.value}
+    } else if( action.type === 'CLEAR'){
+        return usersFeedback
     }
     return state;
   }
