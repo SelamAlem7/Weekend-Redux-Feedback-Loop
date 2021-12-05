@@ -28,6 +28,7 @@ function Review () {
             
         })
         
+        history.push('/feedback')
   
   }
 

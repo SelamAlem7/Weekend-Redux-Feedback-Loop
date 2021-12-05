@@ -6,6 +6,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Feedback from '../Feedback/Feedback';
 import {HashRouter as Router, Route } from 'react-router-dom'
 
 
@@ -37,6 +38,10 @@ function App() {
             </Route>
             <Route path='/understanding'>
              <Understanding />
+            </Route>
+
+            <Route path='/feedback'>
+             <Feedback />
             </Route>
         </Router>
       </header>
